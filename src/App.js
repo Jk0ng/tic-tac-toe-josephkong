@@ -31,19 +31,19 @@ const App = () => {
     setPlayerY(e.target.value)
   }
   const playerTurn = () => {
-    if (squares.filter((value)=> value === "?").length % 2 !== 0) {
-      return `${playerX}'s turn`
+    if (squares.filter((value) => value === "?").length % 2 !== 0) {
+      return `${playerX}`
     }
-    else if (squares.filter((value)=> value === "?").length % 2 === 0)
-    {
-      return `${playerY}'s turn`
+    else if (squares.filter((value) => value === "?").length % 2 === 0) {
+      return `${playerY}`
     }
   }
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
   const toggle = () => {
     setModal(!modal)
   }
   var updatedSquares = [...squares]
+  //check for winning conditions
   const checkWinning = (array) => {
     var winningConditions = [
       [0, 1, 2],
@@ -55,6 +55,8 @@ const App = () => {
       [0, 4, 8],
       [2, 4, 6]
     ]
+    //use a for loop to iterate all the nested varrays(winning combinations) from the 2d array 
+    //then check if the 
     for (let i = 0; i < winningConditions.length; i++) {
       let parentArray = winningConditions[i]
       if (
@@ -69,9 +71,10 @@ const App = () => {
           array[parentArray[0]] !== "?"
         )
       ) {
-        alert(`${array[parentArray[0]]} won!`);
+        alert(`Player ${array[parentArray[0]]} just won! Did you catch it?`);
         reset(); break
       }
+      
     }
   }
   const reset = () => {
@@ -112,13 +115,13 @@ const App = () => {
             />
           )
         })}
-        <div className="entire-content">
-          <ModalComponent modal={modal} toggle={toggle} playerX={playerX} playerY={playerY} handleChange={handleChange} handleChangeY={handleChangeY}/>
-          <Button className="button" color="primary" onClick={toggle}>
-            START
-          </Button>
-          CurrentPlayer: {playerTurn()}
-        </div>
+      </div>
+      <div className="entire-content">
+        <Button className="button" color="primary" onClick={toggle}>
+          START
+        </Button>
+        <ModalComponent modal={modal} toggle={toggle} playerX={playerX} playerY={playerY} handleChange={handleChange} handleChangeY={handleChangeY} />
+        CurrentPlayer: {playerTurn()}
       </div>
       <Reset
         reset={reset} />
