@@ -4,16 +4,15 @@ const ModalComponent = ({ playerX, playerY, toggle, modal, handleChange, handleC
   return (
     <div>
       <Modal isOpen={modal} toggle={toggle} >
-        <ModalHeader  />
+        <ModalHeader />
         <div>
         player X name: 
           <Input name="name" id="name" type="text" value={playerX} onChange={handleChange} />
-          {/* <button onClick={toggle}>submit</button> */}
         </div>
         <div>
         player Y name: 
           <Input name="name" id="name" type="text" value={playerY} onChange={handleChangeY} />
-          <button onClick={toggle}>submit</button>
+          <button onClick={toggle} className="submitButton">submit</button>
         </div>
       </Modal>
     </div>
