@@ -15,32 +15,7 @@ Tic Tac Toe is a classic children's game involving two players alternatively mar
 - [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
 - [Render](https://render.com/docs/deploy-create-react-app)
 
-#### Process
 
-- One person on the team accepts the group assignment from GitHub classroom
-- Create a team name
-- Add additional team members via their GitHub handle
-- Clone the newly created repository
-- `cd` into the repository
-- Run $ `yarn` to install the React dependencies
-- Create a new branch following the naming instructions described below
-- Open the repository in a text editor
-- Code!
-
-#### Useful Commands
-
-- $ `yarn start`
-- control + c (stops the server)
-- command + t (opens a new terminal tab)
-
-#### Troubleshooting Tips
-
-- Is your server running?
-- Are your components exported?
-- Inspect the page and look for errors in the console tab.
-- Always look at the first error message in the list.
-
----
 
 ### Tic Tac Toe
 
