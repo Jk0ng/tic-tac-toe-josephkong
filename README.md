@@ -4,18 +4,10 @@
 
 Tic Tac Toe is a classic children's game involving two players alternatively marking squares on a three-by-three grid. While the game play can be considered relatively simple for humans, creating the logic in code is considerably more challenging.
 
-#### Learning Objectives
-
-- can create a logic component to handle the gameplay
-- can pass data and behavior from a parent component to a nested component with props
-- can effectively work within a team to achieve a desired outcome
 
 #### Additional Resources
 
 - [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe)
-- [Render](https://render.com/docs/deploy-create-react-app)
-
-
 
 ### Tic Tac Toe
 
